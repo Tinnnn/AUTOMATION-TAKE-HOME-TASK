@@ -45,8 +45,8 @@ cypress/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd <local-repository-folder>
+git clone https://github.com/Tinnnn/AUTOMATION-TAKE-HOME-TASK.git
+cd AUTOMATION-TAKE-HOME-TASK
 ```
 
 ### 2️⃣ Install Dependencies
