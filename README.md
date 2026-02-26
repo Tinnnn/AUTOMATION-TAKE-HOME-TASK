@@ -28,15 +28,16 @@ Validation of:
 ---
 
 ## 📁 Project Structure
+```text
 cypress/
-├─ e2e/                 # Test files
-├─ pages/               # Page Object Model classes
-│ └─ index.js           # Centralized export module
-├─ support/     
-│ └─ e2e.js             # Reporter configuration
-cypress.config.js       # Cypress configuration file
-package.json            # Project dependencies & scripts
-
+├── e2e/                # Test files
+├── pages/              # Page Object Model classes
+│   └── index.js        # Centralized export module
+├── support/     
+│   └── e2e.js          # Reporter configuration
+├── cypress.config.js   # Cypress configuration file
+└── package.json        # Project dependencies & scripts
+```
 ---
 
 ## ⚙️ Installation
@@ -89,10 +90,10 @@ The report includes:
 - Detailed error logs for failed test cases  
 - Screenshots captured for failed test cases
 
-## Technical Implementation Details
+## 🛠️ Technical Implementation Details
 
-### Handling bot-blocked links
+### 🔗 Handling bot-blocked links
 While executing the test suite, I noticed that certain platforms frequently block automated requests, returning 400 or 403 errors even when the pages are accessible through the UI. To address this, I implemented conditional validation to recognize these "False Alarms" on known secure domains. This ensures the test suite remains stable by avoiding unnecessary failures, while still strictly failing the test if any domain returns a 404 (Not Found).
 
-### Verify Image Rendering
+### 🖼️ Verify Image Rendering
 This confirms that the image successfully rendered for the user, catching instances where a file might be technically "present" but actually corrupted or blank.
