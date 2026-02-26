@@ -11,12 +11,13 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          # This starts the tests
+          # Executes the Cypress tests
           command: npx cypress run --browser chrome
-          
+         
+          # Generates Mochawesome JSON reports for each test run
       - name: Upload Test Report
         if: always() # Ensures reports are uploaded even if a test fails
         uses: actions/upload-artifact@v4
         with:
           name: cypress-report
-          path: cypress/reports/html/ # Matches your Mochawesome path
+          path: cypress/reports/html/
